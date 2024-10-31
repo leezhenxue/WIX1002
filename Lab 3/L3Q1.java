@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.l3q1;
-
-/**
- *
- * @author zhenx
- */
 
 import java.util.Scanner;
 public class L3Q1 {
