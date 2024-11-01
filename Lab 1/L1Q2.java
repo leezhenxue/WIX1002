@@ -8,7 +8,7 @@ package com.mycompany.l1q2;
  *
  * @author zhenx
  */
-public class MyProfile {
+public class L1Q2 {
 
     /**
      * @param args the command line arguments
