@@ -1,4 +1,4 @@
-package com.mycompany.l4q2;
+
 import java.util.Scanner;
 public class L4Q2 {
 
