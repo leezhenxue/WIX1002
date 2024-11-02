@@ -1,15 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.l1q4;
-
-
-
-/**
- *
- * @author zhenx
- */
 public class L1Q4 {
 
     public static void main(String[] args) {

@@ -1,14 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.l2q5;
-
-/**
- *
- * @author zhenx
- */
-
 import java.util.Random;
 public class L2Q5 {
 

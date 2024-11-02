@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class L4Q2 {
 

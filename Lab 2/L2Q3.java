@@ -1,10 +1,3 @@
-package com.mycompany.l2q3;
-
-/**
- *
- * @author zhenx
- */
-
 import java.util.Random;
 public class L2Q3{
     

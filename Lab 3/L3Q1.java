@@ -1,5 +1,3 @@
-package com.mycompany.l3q1;
-
 import java.util.Scanner;
 public class L3Q1 {
 
