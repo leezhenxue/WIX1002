@@ -6,6 +6,5 @@ public class L1Q2 {
         System.out.println("Adress: Johor Bahru, Johor");
         System.out.println("Email: 24004491@siswa.um.edu.my");
         System.out.println("Contact: 01156653662");
-    }
-    
+    } 
 }
