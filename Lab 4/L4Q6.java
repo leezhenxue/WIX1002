@@ -1,16 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-
-
-/**
- *
- * @author zhenx
- */
+import java.util.Random;
 public class L4Q6 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Random input = new Random();
+        int digit = 0;
+
+        int num = input.nextInt(Integer.MAX_VALUE);
+        System.out.println("The random number: " + num);
+        
+        while (num > 0){
+            num /= 10;
+            digit ++;
+        }
+        
+        System.out.println("The number of digits of the integer: " + digit);
+
     }
 }
