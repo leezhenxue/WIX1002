@@ -23,7 +23,7 @@ public class L4Q3 {
         }
         
         s2 = (sum2 - (Math.pow(sum, 2) / n)) / (n - 1);
-        System.out.printf("%.1f\n", (double) s2);
+        System.out.printf("%.1f\n", s2);
         System.out.println("Minimum Score: " + min);
         System.out.println("Maximum Score: " + max);
         System.out.printf("Average Score: %.2f\n", (sum / (double) n));
