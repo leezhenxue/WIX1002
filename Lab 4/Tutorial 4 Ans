@@ -11,7 +11,24 @@ for (int n = 1; n <= 12; n++){
 }
 
 //c. Display a 4-by-5 matrix using random number within 0 to 100.
+int rows = 4;
+int columns = 5;
+int[][] matrix = new int[rows][columns];
 
+Random random = new Random();
+
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+        matrix[i][j] = random.nextInt(101); 
+    }
+}
+
+System.out.println("4-by-5 Random Matrix:");
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+        System.out.print(matrix[i][j] + "\t");
+    }
+    System.out.println();
 
 //d. Compute the sum of numbers from 1 to a given number. 
 int sum = 0;
@@ -25,6 +42,7 @@ double sum = 0;
 for (int i = 1; i <= 25; i++){
     sum += ( (double) i / (25-i+1) );
 }
+
 
 //2. Correct the error for the following statements. 
 //a.  
@@ -51,7 +69,8 @@ while(i<=10) {
 }
 
 
-//Write the statements that display the first ten values of the Fibonacci sequence. Given the formula f1 = 1, f2 =1, fn = fn-1 + fn-2.
+//3. Write the statements that display the first ten values of the Fibonacci sequence. 
+//   Given the formula f1 = 1, f2 =1, fn = fn-1 + fn-2.
 int fn2 = 1, fn1 = 1, fn = 0;
 System.out.println("The first value is " + fn2);
 System.out.println("The second value is " + fn1);
@@ -60,4 +79,12 @@ for (int n = 3; n <= 10; n++){
     fn2 = fn1;
     fn1 = fn;
     System.out.println("The " + n + " value is " + fn);
+}
+
+
+//4.Write the statements that display the string in reverse order. 
+//  (use String.length() to get the length of the string)
+String x;
+for (int i = (x.length() - 1); i >= 0; i--){
+    System.out.pritnln(x.charAt(i));
 }
