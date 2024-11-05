@@ -1,0 +1,63 @@
+//1.
+//a. Find the largest integer n so that n3 is less than 2000.
+int n = 0;
+while (Math.pow(n, 3) < 2000){
+    n++;
+}
+    
+//b. Display the square number of the first twelve integers starting from 1. 
+for (int n = 1; n <= 12; n++){
+    System.out.println(n*n);
+}
+
+//c. Display a 4-by-5 matrix using random number within 0 to 100.
+
+
+//d. Compute the sum of numbers from 1 to a given number. 
+int sum = 0;
+int num = input.nextInt();
+for (int i = 1; i <= num; i++){
+    sum += i;
+}
+    
+//e. Compute the sum  of the series:  1/25+2/24+3/23 ... + 25/1  in  two  decimal places
+double sum = 0;
+for (int i = 1; i <= 25; i++){
+    sum += ( (double) i / (25-i+1) );
+}
+
+//2. Correct the error for the following statements. 
+//a.  
+for (x = 10; x > 0; x--) 
+    sum += x;   
+
+//b.
+do{     
+    x += 2;     
+    y += x;                 
+    System.out.println(x + " and " + y); 
+}while (x < 100)
+    
+//c.
+for (x=1, y=20; x < y, x++, y-=2)  
+    System.out.println(x + " " + y);
+
+//d.
+i =1; 
+while(i<=10) {    
+    if (i=10)       
+        System.out.println("Program End"); 
+    i++;
+}
+
+
+//Write the statements that display the first ten values of the Fibonacci sequence. Given the formula f1 = 1, f2 =1, fn = fn-1 + fn-2.
+int fn2 = 1, fn1 = 1, fn = 0;
+System.out.println("The first value is " + fn2);
+System.out.println("The second value is " + fn1);
+for (int n = 3; n <= 10; n++){
+    fn = fn1 + fn2;
+    fn2 = fn1;
+    fn1 = fn;
+    System.out.println("The " + n + " value is " + fn);
+}
