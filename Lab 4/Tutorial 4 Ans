@@ -4,6 +4,8 @@ int n = 0;
 while (Math.pow(n, 3) < 2000){
     n++;
 }
+n--;
+System.out.println(n);
     
 //b. Display the square number of the first twelve integers starting from 1. 
 for (int n = 1; n <= 12; n++){
