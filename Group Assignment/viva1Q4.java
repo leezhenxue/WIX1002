@@ -25,12 +25,7 @@ public class viva1Q4 {
 
         System.out.println("you've inputed a valid integer!");
 
-        if (num % 2 == 0){
-            System.out.println("The integer is even!");
-        }
-        else{
-            System.out.println("The integer is odd!");
-        }
+        System.out.println(num % 2 == 0 ? "The integer is even!" : "The integer is odd!");
 
         input.close();
     }
