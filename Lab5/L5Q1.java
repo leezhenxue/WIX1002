@@ -1,12 +1,10 @@
-package Lab5;
-
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 public class L5Q1 {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
         Random rand = new Random();
-        int student = 0, highest = 0, lowest = 100, sum = 0;
+        int student, highest = 0, lowest = 100, sum = 0;
 
         System.out.print("Enter the number of student: ");
         student = input.nextInt();
