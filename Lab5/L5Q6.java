@@ -27,7 +27,7 @@ public class L5Q6 {
                 }
                 for (int i = 0; i < row; i++){
                     System.out.print(num[i] + " ");
-            }
+                }
                 System.out.println();
             }
         }

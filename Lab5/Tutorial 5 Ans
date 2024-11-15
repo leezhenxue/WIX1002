@@ -1,0 +1,90 @@
+//1. Write statements for each of the following
+a.
+float[] array = new float[12];
+
+b.
+char[] array = {"A", "B", "C", "D", "E", "F"};
+
+c.
+String[] array = new String[100];
+
+d. 
+int[][] array = new int[6][2];
+
+e.
+int[][] array = {{6,9},{2,4},{3,7}};
+
+f.
+array[1][1] = 5;
+array[2][0] = 3;
+array[2][1] = 7;
+
+g. 
+for (String contant : contacts){
+    System.out.println(contact);
+}
+
+//2. Correct the error for the following statements.
+a.
+String[] code = {"AAA", "AAB", "AAC", "AAD"}; 
+
+b.  
+int[] num = new int[10]; 
+for(int k=0; k<num.length; k++){
+    sum+=num; 
+} 
+
+c.
+int[][] t = new int[3][2];   
+t[1][2] = 5;
+
+d.
+int i=4; 
+int[] score = new int[5]; 
+score [1] = 78; 
+score[i] = 100;
+
+//3. Determine the values of each element of array marks.
+961, 31, 1, 31, 31
+
+/*4. Write  the  statements  that  display  the  number  of  occurrence  of  
+the  word  "the"  (case sensitive) in a string array name sentence. */
+int occ = 0;
+for (String sentence : sentences) {
+    String[] words = sentence.split(" ");
+    for (String word : words) {
+        if (word.equals("the")) {
+            occ++;
+        }
+    }
+}
+System.out.println("The number of occurrence of the word \"the\": " + occ)
+
+/*5. Write  the  statements  that  display  the  string  array  name  sentence  in  
+reverse  order. Each string element must be displayed in reverse order as well. */
+for (int j = sentences.length - 1; j >= 0; j++){
+    for (int i = name.length-1; i >= 0; i++){
+        System.out.print(name.charAt(i));
+    }
+}
+
+
+/*6. Write  the  statements  that  generate  1  random  integer  within  
+0  –  255.  Convert  the number  to  binary  and  store  the  bit  into  
+an  8  bit  array.  Then,  display  the  binary number. */
+int[] bits = new int[8];
+int num = random.nextInt(0, 256);
+for (int i = 7; i >= 0; i++){
+    if (num > 0){
+        bits[i] = num % 2;
+        num /= 2;
+    }
+    else{
+        bits[i] = 0;
+    }
+}
+
+for (int bit : bits){
+    System.out.print(bit);
+}
+

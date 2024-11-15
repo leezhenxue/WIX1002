@@ -9,17 +9,25 @@ public class Q1 {
         
         System.out.print("Enter username: ");
         String username = sc.next().toLowerCase();
-         
-        for(int i = 0; i < username.length(); i++) {
-            char rune = username.charAt(i); 
-            username = username.replace(rune, ' ');
-            if(rune != ' ') numOfRunes++;
+        sc.close();
+
+        if (username.length() <= 100){
+            for(int i = 0; i < username.length(); i++) {
+                char rune = username.charAt(i); 
+                username = username.replace(rune, ' ');
+                if(rune != ' ') numOfRunes++;
+            }
+            
+            if(numOfRunes % 2 == 0) {
+                System.out.print("ALLY DETECTED!");
+            }else{
+                System.out.print("ENEMY ALERT!");
+            }
+        }
+        else {
+            System.out.print("Username entered too long!");
         }
         
-        if(numOfRunes % 2 == 0) {
-            System.out.print("ALLY DETECTED!");
-        }else{
-            System.out.print("ENEMY ALERT!");
-        }
     }
 }
+
