@@ -1,0 +1,128 @@
+1. 
+a.
+public static int max(int a, int b, int c){
+    if (a > b && a > c){
+        return a;
+    }
+    else if (b > c){
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
+b.
+public static boolean squarenum(int num){
+    sqrtnum = (int) Math.sqrt(num);
+    return (sqrtnum * sqrtnum == num);
+}
+
+c.
+public static int C(int n, int k){
+    return (factorial(n) / (factorial(k) * factorial (n-k)));
+}
+
+public static int factorial(int num){
+    if (num == 0){
+        return 0;
+    }
+    else {
+        return (num * factorial (num - 1));
+    }
+}
+
+d.
+public static boolean pentagonalnum(int num){
+    integer = (int) (1 / 2 * num * (3*num - 1));
+    return(integer = (1 / 2 * num * (3*num - 1)))
+}
+
+e.
+public static void number(String word.toLowerCase()){
+    int lettersum = 0, digitsum = 0;
+    for (int  i = 0; i < word.length(); i++){
+        if (word.charAt(i) >= 'a' && word.charAt(i) <= 'z'){
+            lettersum ++;
+        }
+        else if (word.charAt(i) >= '0' && word.charAt(i) <= '9'){
+            digitsum ++;
+        }
+    }
+    System.out.println("The number of letters is " + lettersum);
+    System.out.println("The number of digits is  " + digitsum);
+}
+
+f.
+public static void randnum(int[] num){
+    Random rand = new Random();
+    for (int i = 0; i < num.length; i++) {
+        num[i] = rand.nextInt(101);
+    }
+}
+
+g.
+public static void circle(int r){
+    double area = Math.pi * r * r;
+    double circumference = 2 * Math.pi * r;
+    System.out.println("Area: " + area);
+    System.out.println("Circumference: " + circumference);
+}
+
+h.
+public static int twice(){
+    Random rand = new Random();
+    int[] num = new int[12];
+    for (int i = 0; i < 12; i++){
+        num[i] = rand.nextInt(11);
+        for (int j = 0; j < i; j++){
+            if (num[j] == num[i]){
+                return num[j];
+            }
+        }
+    }
+}
+
+
+2.
+import java.util.Scanner;
+class T6Q2 {
+    public static void main(String[] args){
+        Scanner input = new Scanner (System.in);
+        int num1, num2, num3;
+        System.out.print("Num 1: ");
+        num1 = input.nextInt();
+        System.out.print("Num 2: ");
+        num2 = input.nextInt();
+        System.out.print("Num 3: ");
+        num3 = input.nextInt();
+        dorder(num1, num2, num3);
+    }
+
+    public static void dorder(int num1, int num2, int num3){
+        if ((num1 > num2) && (num1 > num3)){
+            if (num2 > num3){
+                System.out.println(num1 + ", " + num2 + ", " + num3);
+            }
+            else{
+                System.out.println(num1 + ", " + num3 + ", " + num2);
+            }
+        }
+        else if (num2 > num3){
+            if (num1 > num3){
+                System.out.println(num2 + ", " + num1 + ", " + num3);
+            }
+            else {
+                System.out.println(num2 + ", " + num3 + ", " + num1);
+            }
+        }
+        else {
+            if (num1 > num2){
+                System.out.println(num3 + ", " + num1 + ", " + num2);
+            }
+            else {
+                System.out.println(num3 + ", " + num2 + ", " + num1);
+            }
+        }
+    }
+}
