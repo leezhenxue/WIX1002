@@ -1,0 +1,146 @@
+1.
+a.
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
+
+public class test {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int integer;
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("integer.txt"));
+            for (int i = 0; i < 10; i++){
+                integer = rand.nextInt(1001);
+                writer.write(integer + " ");
+            }
+            writer.close();
+        } catch (IOException e){
+            System.out.println("IO Error: " + e.getMessage());
+        }
+    } 
+}
+
+b.
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class test {
+    public static void main(String[] args) {
+        int[] num = new int[10];
+        int largest = 0;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("integer.txt"));
+            String[] numbers = reader.readLine().split(" ");
+            for (int i = 0; i < numbers.length; i++){
+                num[i] = Integer.parseInt(numbers[i]);
+                System.out.println(num[i]);
+            }
+            for (int i = 0; i < numbers.length; i++){
+                if (num[i] > largest){
+                    largest = num[i];
+                }
+            }
+            System.out.println("Largest: " + largest);
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+        }
+    } 
+}
+
+c.
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Random;
+
+public class test {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int num;
+        try {
+            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("integer.dat"));
+            for (int i = 0; i < 10; i++){
+                num = rand.nextInt(1001);
+                outputStream.writeInt(num);
+                System.out.println(num);
+            }
+            outputStream.close();
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+        }
+    } 
+}
+
+d.
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class test {
+    public static void main(String[] args) {
+        int num, sum = 0;
+        try {
+            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("integer.dat"));
+            for (int i = 0; i < 10; i++){
+                num = inputStream.readInt();
+                sum += num;
+                System.out.println(num);
+            }
+            inputStream.close();
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+        }
+        System.out.println("Average: " + (sum /  10));
+    } 
+}
+
+
+2. // All question 2 haven't done
+a.
+PrintWriter out = new PrintWriter(new FileOutputStream("d:\data\matrix.txt")); 
+
+b.
+try {    
+    PrintWriter out = new PrintWriter(new FileOutputStream("data.txt"));    
+    out.close(); 
+} catch (FileNotFoundException e) {    
+    System.out.println("Problem with file output"); 
+} catch (IOException e) {
+    System.out.println("IO Error");
+}
+
+c.
+int num; 
+ObjectInputStream a = new ObjectInputStream(new FileInputStream("data.dat")); 
+num = a.readInt(); 
+a.close();
+
+d.
+ObjectOutputStream o = new ObjectOutputStream (new FileOutputStream("data.dat")); 
+o.writeChar('A'); 
+o.close();
+
+
+3.
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class test {
+    public static void main(String[] args) {
+        try {
+            String sentence = "abcABC";
+            BufferedWriter writer = new BufferedWriter(new FileWriter("data.txt"));
+            for (char character : sentence.toCharArray()){
+                writer.write(Integer.toString((int) character));
+                writer.newLine();
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+        }
+    } 
+}

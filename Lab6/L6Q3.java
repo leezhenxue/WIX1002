@@ -22,8 +22,12 @@ public class L6Q3 {
     public static int[] reverse(int[] num){
         int[] rnum = new int[num.length];
         for (int i = 0; i < num.length; i++){
-            rnum[i] = num[num.length-1-i];
+            while (num[i] != 0){
+                rnum[i] = (rnum[i] * 10) + num[i] % 10;
+                num[i] /= 10;
+            }
         }
         return rnum;
     }
 }
+
