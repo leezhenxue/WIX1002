@@ -1,0 +1,166 @@
+1.
+a.
+public class(){}
+
+b.
+private int contact;
+
+c.
+public Contact(){
+    this.contact = null;
+}
+
+d.
+public Contact(int contact){}
+ 
+e.
+public String accessor(){
+    return contact;
+}
+
+public void mutator(int contact){
+    this.contact = contact;
+}
+
+f.
+public void Display(){
+    System.out.println("Contact Number: " + this.contact);
+}
+
+g.
+Student student = new Student();
+
+h.
+public void changeContact(int contact){
+    this.contact = contact;
+}
+
+i.
+Animal animal = new Animal();
+
+j.
+Animmal cat = new Animal();
+
+k.
+Number number = new Number(20, 40);
+
+2.
+a.
+public class Digit{}
+
+b.
+private int number;
+
+c.
+public Number(int number){
+    this.number = number;
+}
+
+d.
+private int digitmul = 1;
+public int digitMultiplication(int number){
+    while (number > 0){
+        this.digitmul *= (number % 10);
+        number /= 10;
+    }
+    return this.digitmul;
+}
+
+e.
+public void Display(){
+    System.out..println("Digit Multiplication Of The Numbers: " + this.digitmul)
+}
+
+f.
+public class Tester{
+    public static void main(String[] args){
+        Number number = new Number(4567);
+        number.digitMultiplication();
+        number.Display();
+    }
+}
+
+3.
+public class Coordinate{
+    private double x = 0;
+    private double y = 0;
+
+    public Coordinate(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getX(){
+        return x;
+    }
+
+    public double getY(){
+        return y;
+    }
+
+    public void changeX(double x){
+        this.x = x;
+    }
+
+    public void changeY(double y){
+        this.y = y;
+    }
+
+    public void Display(){
+        System.out.println("X: " + this.x);
+        System.out.println("Y: " + this.y);
+    }
+}
+
+4.
+public class Payment{
+    private double amount;
+    private int chequeNumber;
+    private String name;
+    private String cardType;
+    private String date; 
+    private int validCode;
+
+    public void payment(double amount){
+        this.amount = amount;
+    }
+
+    public void payment(double amount, int chequeNumber){
+        this.amount = amount;
+        this.chequeNumber = chequeNumber;
+    }
+
+    public void payment(double amount, String name, String cardType, String date, int validCode){
+        this.amount = amount;
+        this.name = name;
+        this.cardType = cardType;
+        this.date = date;
+        this.validCode = validCode;
+    }
+}
+
+5.
+public class Connection{
+    private int connectionNum = 0;
+    private boolean isDisconnected = false;
+
+    public Connection(){
+        this.connectionNum++;
+        this.isDisconnected = false;
+    }
+
+    public void Disconnect(){
+        if (this.isDisconnect){
+            System.out.println("This connection has already been disconnected before.")
+        }
+        else {
+            this.Disconnect = true;
+            this.connectionNum--;
+        }
+        
+    }
+
+    public void Display(){
+        System.out.println("The number of connection is: " + this.connectionNum);
+    }
+}
