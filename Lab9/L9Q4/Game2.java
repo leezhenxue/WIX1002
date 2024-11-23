@@ -1,13 +1,19 @@
+import java.util.Scanner;
+
 public class Game2{
     private final Dice dice = new Dice();
     private int totalScore = 0;
     
-
     public Game2(){
+        Scanner input = new Scanner (System.in);
+        System.out.print("Welcome to Game 2.");
         do {
+            input.nextLine();
             mark();
+            System.out.print("Total Score:" + totalScore);
+
         } while (!win());
-        System.out.println("Player win");
+        System.out.println("\nPlayer win\n");
     }
 
     private void mark(){
