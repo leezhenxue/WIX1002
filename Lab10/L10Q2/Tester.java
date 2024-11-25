@@ -1,0 +1,27 @@
+import java.io.IOException;
+public class Tester {
+    public static void main(String[] args) {
+        try {
+            // Input and output file names
+            String inputFileName = "plainText.txt";
+            String cipherFileName = "cipherText.txt";
+            String decodedFileName = "decodedText.txt";
+
+            // Create a SubstitutionCipher instance with shift 3
+            SubstitutionCipher cipher = new SubstitutionCipher(inputFileName, cipherFileName, 3);
+
+            // Encode the text
+            cipher.processFile(true); // Encoding mode
+            System.out.println("Encoded text written to: " + cipherFileName);
+
+            // Decode the encoded text
+            cipher = new SubstitutionCipher(cipherFileName, decodedFileName, 3);
+            cipher.processFile(false); // Decoding mode
+            System.out.println("Decoded text written to: " + decodedFileName);
+            cipher.close();
+
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+        }
+    }
+}

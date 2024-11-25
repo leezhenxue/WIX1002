@@ -1,6 +1,5 @@
 public interface MessageEncoder {
-    void encode{
-
-    }
+    String encode(String plainText);
+    String decode(String cipherText);
     
 }

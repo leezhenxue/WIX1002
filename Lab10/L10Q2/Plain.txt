@@ -1,0 +1,4 @@
+This is a sample paragraph inside the Plain.txt file. 
+The purpose of this file is to demonstrate how to create and write to a text file programmatically. 
+It contains multiple sentences that provide sufficient text for testing or demonstration purposes. 
+This is the end of the paragraph.
