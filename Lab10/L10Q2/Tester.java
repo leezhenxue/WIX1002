@@ -1,7 +1,6 @@
-import java.io.IOException;
+package L10Q2;
 public class Tester {
     public static void main(String[] args) {
-        try {
             // Input and output file names
             String inputFileName = "plainText.txt";
             String cipherFileName = "cipherText.txt";
@@ -18,10 +17,6 @@ public class Tester {
             cipher = new SubstitutionCipher(cipherFileName, decodedFileName, 3);
             cipher.processFile(false); // Decoding mode
             System.out.println("Decoded text written to: " + decodedFileName);
-            cipher.close();
-
-        } catch (IOException e) {
-            System.out.println("IO Error: " + e.getMessage());
-        }
-    }
+    
+    }    
 }
