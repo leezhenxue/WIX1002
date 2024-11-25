@@ -1,0 +1,139 @@
+1.
+public abstract class DiscountPolicy {
+    abstract double computeDiscount(int count, double itemCost);
+}
+
+class BulkDiscount extends DiscountPolicy {
+    private int minimum;
+    private double rate = 0;
+
+    public BulkDiscount(int minimum, double rate){
+        this.minimum = minimum;
+        this.rate = rate;
+    }
+
+    @Override
+    public double computeDiscount(int count, double itemCost) {
+        if(count >= minimum){
+            return count * itemCost * rate;
+        }
+        else{
+            return 0;
+        }
+    }
+}
+
+class OtherDiscount extends DiscountPolicy {
+    @Override
+    public double computeDiscount(int count, double itemCost){
+        if (count >= 3 && count <= 5) {
+            return count * itemCost * 0.1;
+        } else if (count >= 6 && count <= 8) {
+            return count * itemCost * 0.2;
+        } else if (count >= 9) {
+            return count * itemCost * 0.3;
+        } else {
+            return 0;
+        }
+    }
+}
+
+class combineDiscount extends DiscountPolicy {
+    @Override
+    public double computeDiscount(int count, double itemCost){
+        OtherDiscount otherDiscount = new OtherDiscount();
+        BulkDiscount bulkDiscount = new BulkDiscount(5, 0.1);
+        return otherDiscount.computeDiscount(count, itemCost) + bulkDiscount.computeDiscount(count, itemCost);
+    }   
+}
+
+class Tester {
+    public static void main(String[] args) {
+        combineDiscount item = new combineDiscount();
+        double itemCost = 100;
+        double finalCost = itemCost - item.computeDiscount(5, itemCost);
+        System.out.println(finalCost);
+    }
+}
+
+2.
+public interface Interest {
+    double computeInterest();
+}
+
+public class SavingAccount implements Interest {
+    private double balance;
+
+    public SavingAccount(double balance){
+        this.balance = balance;
+    }
+
+    @Override
+    double computeInterest() {
+        return this.balance * 0.005;
+    }
+}
+
+public class FixedAccount implements Interest {
+    private double balance;
+
+    public FixedAccount(double balance){
+        this.balance = balance;
+    }
+
+    @Override
+    double computeInterest() {
+        return balance * 0.03;
+    }
+}
+
+public class Tester {
+    public static void main(String[] args) {
+        SavingAccount savingAccount = new SavingAccount(1000);
+        FixedAccount fixedAccount = new FixedAccount(1000);
+        System.out.println(savingAccount.computeInterest());
+        System.out.println(fixedAccount.computeInterest());
+    }
+}
+
+3.
+public class Person implements Comparable<Person> {
+    private String name;
+
+    public Person(String name){
+        this.name = name;    
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    @Override
+    public int compareTo(Person p){
+        return this.name.compareTo(p.getName());
+    }
+
+    public String toString(){
+        return name;
+    }
+
+}
+
+public class Tester {
+    public static void main(String[] args) {
+        Person[] persons = new Person[2];
+        persons[0] = new Person("John");
+        persons[1] = new Person("Doe");
+
+        Arrays.sort(persons);
+
+        System.out.println("Sorted Persons:");
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+    }
+}
