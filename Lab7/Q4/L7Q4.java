@@ -1,6 +1,7 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+package Q4;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class L7Q4 {
     public static void main(String[] args) {
@@ -8,8 +9,8 @@ public class L7Q4 {
         int linecount = 0, wordcount = 0, charcount = 0;
         String line;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(filename));
-            while ((line = reader.readLine()) != null){
+            Scanner input = new Scanner(new FileInputStream(filename));
+            while ((line = input.nextLine()) != null){
                 linecount++;
                 
                 String[] words = line.split("\\s+");

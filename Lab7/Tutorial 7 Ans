@@ -98,16 +98,14 @@ public class test {
 }
 
 
-2. // All question 2 haven't done
+2.
 a.
-PrintWriter out = new PrintWriter(new FileOutputStream("d:\data\matrix.txt")); 
+PrintWriter out = new PrintWriter(new FileOutputStream("d:/data/matrix.txt")); 
 
 b.
 try {    
     PrintWriter out = new PrintWriter(new FileOutputStream("data.txt"));    
     out.close(); 
-} catch (FileNotFoundException e) {    
-    System.out.println("Problem with file output"); 
 } catch (IOException e) {
     System.out.println("IO Error");
 }

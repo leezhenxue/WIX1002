@@ -1,19 +1,20 @@
-import java.io.BufferedReader;
+package Q3;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.util.Scanner;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class L7Q3 {
     public static void main(String[] args) {
         String filename = "L7Q3_random_essay.txt";
         int linecount = 0;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(filename));
-            while (reader.readLine() != null){
+            Scanner input = new Scanner(new FileInputStream(filename));
+            while (input.nextLine() != null){
                 linecount++;
             }
-            reader.close();
+            input.close();
         } catch (FileNotFoundException e){
             System.out.println("File " + filename + " not found");
         } catch (IOException e){
@@ -23,17 +24,17 @@ public class L7Q3 {
         String[] lines = new String[linecount];
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(filename));
+            Scanner input = new Scanner(new FileInputStream(filename));
             for (int i = 0; i < linecount; i++) {
-                lines[i] = reader.readLine(); // Read each line into the array
+                lines[i] = input.nextLine(); // Read each line into the array
             }
-            reader.close();
+            input.close();
         } catch (IOException e) {
             System.out.println("IOError: " + e.getMessage());
             return; // Exit program if an IO error occurs
         }
 
-        try (FileWriter writer = new FileWriter("reverse.txt")) { // Open in append mode
+        try (PrintWriter writer = new PrintWriter("reverse.txt")) { // Open in append mode
             for (int line = 0; line < lines.length; line++) {
                 String[] words = lines[lines.length - 1 - line].split("\\s+|,\\s*|\\.\\s*"); // Split into words
                 String[] rwords = new String[words.length]; // Reverse the words
