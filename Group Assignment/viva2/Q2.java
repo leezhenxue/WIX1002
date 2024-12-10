@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class viva2q2 {
+public class Q2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Array 1: ");
