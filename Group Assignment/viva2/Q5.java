@@ -10,10 +10,10 @@ public class Q5 {
     
         printFruit(fruits);
     
-        System.out.println("Please enter the fruit you want to buy: ");
+        System.out.print("Please enter the fruit you want to buy: ");
         String fruitSelect = in.nextLine();
     
-        System.out.println("Unit or Box: ");
+        System.out.print("Unit or Box: ");
         int quantity = in.nextInt();
     
         int fruitIdx = getIdxFruit(fruits, fruitSelect);

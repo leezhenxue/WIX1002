@@ -1,10 +1,15 @@
 import java.util.Scanner;
 public class Q6 {
     public static void main(String[] args) {
-        parseMatrix();
+        int[][] matrix = parseMatrix();
+        System.out.println("The original matrix:");
+        displayMatrix(matrix);
+        System.out.println("The matrix after rotating:");
+        int[][] rotatedMatrix = rotateMatrix(matrix);
+        displayMatrix(rotatedMatrix);
     }
 
-    public static void parseMatrix() {
+    public static int[][] parseMatrix() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the dimension of the square matrix: ");
         int n = sc.nextInt();
@@ -17,12 +22,10 @@ public class Q6 {
         }
         System.out.println();
         sc.close();
-
-        displayMatrix(matrix);
+        return matrix;
     }
 
     public static void displayMatrix(int [][]matrix) {
-        System.out.println("The original matrix:");
         for (int i=0; i<matrix.length; i++) {
             for (int j=0; j<matrix[i].length; j++) {
                 System.out.printf("%3d", matrix[i][j]);
@@ -30,36 +33,16 @@ public class Q6 {
             System.out.println();
         }
         System.out.println();
-
-        rotateMatrix(matrix);
-
-        System.out.println("The matrix after rotating:");
-        for (int i=0; i<matrix.length; i++) {
-            for (int j=0; j<matrix[i].length; j++) {
-                System.out.printf("%3d", matrix[i][j]);
-            }
-            System.out.println();
-        }
     }
 
-    public static void rotateMatrix (int [][]matrix) {
-        int n = matrix.length;
-        for (int i=0; i<n; i++) {
-            for (int j=i; j<n; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = temp;
+    public static int[][] rotateMatrix (int [][]matrix) {
+        int[][] rotatedMatrix = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j < matrix.length ; j++) {
+                rotatedMatrix[i][j] = matrix[matrix.length - 1 - j][i];
             }
         }
-
-        for (int i=0; i<n; i++) {
-            for (int j=0; j<n/2; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[i][(n-1)-j];
-                matrix[i][(n-1)-j] = temp;
-
-            }
-        }
+        return rotatedMatrix;
     }
 
 }
