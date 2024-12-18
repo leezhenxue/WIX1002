@@ -1,4 +1,3 @@
-package viva2;
 
 import java.util.Scanner;
 

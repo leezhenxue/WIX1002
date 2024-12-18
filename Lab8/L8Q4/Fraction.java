@@ -57,7 +57,13 @@ public class Fraction {
         this.denominator /= gcd;
 
         System.out.println("Lowest Terms: " + this.numerator + " / " + this.denominator);
-    }
+    }   
+}
 
-    
+class Tester {
+    public static void main(String[] args) {
+        Fraction fraction = new Fraction();
+        fraction.input();
+        fraction.lowestTerm();
+    }
 }
