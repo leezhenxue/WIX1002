@@ -14,8 +14,8 @@ public class Tester {
             System.out.println("Encoded text written to: " + cipherFileName);
 
             // Decode the encoded text
-            cipher = new SubstitutionCipher(cipherFileName, decodedFileName, 3);
-            cipher.processFile(false); // Decoding mode
+            SubstitutionCipher cipher2 = new SubstitutionCipher(cipherFileName, decodedFileName, 3);
+            cipher2.processFile(false); // Decoding mode
             System.out.println("Decoded text written to: " + decodedFileName);
     
     }    
