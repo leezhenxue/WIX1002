@@ -93,10 +93,10 @@ public class Vehicle{
     }
     
     public double calculateFuelCharge(){  
-        if(fuelLevel < 50){    
-            return 100 - fuelLevel + 50;
+        if(fuelLevel <= 50){    
+            return 50;
         }
-        return 100 - fuelLevel;
+        return 0;
     }
     
     @Override
