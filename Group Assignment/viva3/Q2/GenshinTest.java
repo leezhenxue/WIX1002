@@ -1,4 +1,4 @@
-package viva3;
+package Q2;
 
 public class GenshinTest {
 

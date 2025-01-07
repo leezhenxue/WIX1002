@@ -1,3 +1,5 @@
+package Q6;
+
 public class Customer {
     private String name;
     private String email;

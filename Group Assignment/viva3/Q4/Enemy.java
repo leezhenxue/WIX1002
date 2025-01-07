@@ -1,4 +1,4 @@
-package V3Q4;
+package Q4;
 public class Enemy {
     //initialise instance variable
     private String type;

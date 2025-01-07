@@ -1,4 +1,4 @@
-package V3Q1;
+package Q1;
 
 public class Vehicle{
     private String vehicleID;

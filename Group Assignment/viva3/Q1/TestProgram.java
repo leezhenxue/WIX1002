@@ -1,5 +1,7 @@
-package V3Q1;
+package Q1;
+
 import java.util.Scanner;
+
 public class TestProgram {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);

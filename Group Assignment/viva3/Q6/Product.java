@@ -1,4 +1,4 @@
-package q6;
+package Q6;
 
 public class Product {
     private String name;

@@ -1,4 +1,4 @@
-package V3Q4;
+package Q4;
 import java.util.Scanner;
 public class GameLog {
     public static void main(String[] args){

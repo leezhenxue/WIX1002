@@ -1,4 +1,4 @@
-package V3Q4;
+package Q4;
 public class Player {
     //initialise instance variable
     private String name;

@@ -1,4 +1,4 @@
-package V3Q4;
+package Q4;
 public class Item {
    private String name;
    private int effect;
